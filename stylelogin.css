@@ -1,0 +1,43 @@
+body {
+  font-family: Arial;
+  background:#0a3d62;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: rebeccapurple;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+  text-align: center;
+  width: 300px;
+}
+
+table { margin: auto; }
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 160px;
+  padding: 6px;
+  margin: 4px 0;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+a {
+  color: white;
+  background-color:blue;
+  text-decoration: none;
+}

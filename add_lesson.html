@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Lesson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>➕ Add Lesson</h2>
+<a href="my_courses.html">⬅ Back to My Courses</a>
+<br><br>
+
+<!-- Message placeholder -->
+<p id="message"></p>
+
+<form method="POST" action="add_lesson.php">
+    <!-- Select course manually -->
+    <label>Select Course:</label><br>
+    <select name="course_id" required>
+        <option value="">-- Select Course --</option>
+        <option value="1">PHP for Beginners</option>
+        <option value="2">HTML & CSS Basics</option>
+        <option value="3">JavaScript Essentials</option>
+        <!-- Add more courses here manually -->
+    </select>
+    <br><br>
+
+    <label>Lesson Title:</label><br>
+    <input type="text" name="title" required>
+    <br><br>
+
+    <label>Lesson Content (Text / Video URL):</label><br>
+    <textarea name="content" rows="5" required></textarea>
+    <br><br>
+
+    <button type="submit">Add Lesson</button>
+</form>
+
+</body>
+</html>

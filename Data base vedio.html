@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database - Video Page</title>
+    <link rel="stylesheet" href="style-Video-page.css">
+</head>
+<body>
+
+    <div class="header">Database - Video Learning Page</div>
+
+    <div class="container">
+        <div class="main-video">
+            <!-- Main video iframe -->
+            <iframe id="mainVideo" 
+                src="https://www.youtube.com/embed/H5b3Gx9v1cM" 
+                frameborder="0" allowfullscreen></iframe>
+            <h2 id="videoTitle">Introduction to Database</h2>
+        </div>
+        <div class="video-list">
+            <h3>Database Playlist</h3>
+
+     <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/6Iu45VZGQDk', 'Introduction to Database')">
+     <img src="download (1).jfif" alt="Intro">
+        <div class="video-info">
+         <h4>Introduction to Database</h4>
+         <p>11 min</p>
+             </div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/ztHopE5Wnpc', 'Database Models')">
+                <img src="../Image/download (2).jfif" alt="Models">
+                <div class="video-info">
+                    <h4>Database Models</h4>
+                    <p>8 min</p>
+                </div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/2ZyGEq8RWbs', 'Database Security')">
+                <img src="../Image/download (4).jfif" alt="Security">
+                <div class="video-info">
+                    <h4>Database Security</h4>
+                    <p>10 min</p>
+                </div>
+            </div>
+
+          <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/7S_tz1z_5bA', 'SQL Tutorial')">
+             <img src="../Image/download (3).jfif" alt="SQL">
+             <div class="video-info">
+             <h4>SQL</h4>
+            <p>180 min</p>
+        </div>
+     </div>
+
+    <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/5hzZtqCNQKk', 'Transaction Management')">
+        <img src="../Image/download (2).jfif" alt="Transaction">
+            <div class="video-info">
+             <h4>Transaction Management</h4>
+             <p>240 min</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<script>
+    function changeVideo(video, title) {
+        document.getElementById("mainVideo").src = video;
+        document.getElementById("videoTitle").innerText = title;
+    }
+</script>
+
+</body>
+</html>

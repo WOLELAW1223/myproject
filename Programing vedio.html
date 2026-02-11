@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programming - Video Page</title>
+    <link rel="stylesheet" href="style-Video-page.css">
+</head>
+<body>
+
+    <div class="header">Programming - Video Learning Page</div>
+
+    <div class="container">
+        <div class="main-video">
+            <iframe id="mainVideo" src="https://www.youtube.com/embed/Z1Yd7upQsXY" frameborder="0" allowfullscreen></iframe>
+            <h2 id="videoTitle">Introduction to Programming</h2>
+        </div>
+        <div class="video-list">
+            <h3>Programming Playlist</h3>
+
+            <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/Z1Yd7upQsXY', 'Introduction to Programming')">
+                <img src="download (2).jfif" alt="Intro">
+                <div class="video-info">
+                    <h4>Introduction to Programming</h4>
+                    <p>24 min</p>
+                </div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/pTB0EiLXUC8', 'Object-Oriented Programming')">
+                <img src="download (1).jfif" alt="OOP Basics">
+                <div class="video-info">
+                    <h4>Object-Oriented Programming</h4>
+                    <p>7 min</p>
+                </div>
+            </div>
+
+             <div class="video-item"
+                 onclick="changeVideo('https://www.youtube.com/embed/BRrem1k3904', 'File Handling in Python')">
+                <img src="download (3).jfif" alt="File Handling">
+                <div class="video-info">
+                    <h4>File Handling in Python</h4>
+                    <p>22 min</p>
+                </div>
+            </div>
+
+            <div class="video-item"
+                 onclick="changeVideo('https://www.youtube.com/embed/0YS8mLNrqhw', 'Control Structure Tutorial')">
+                <img src="download (4).jfif" alt="Control Structures">
+                <div class="video-info">
+                    <h4>Control Structure Tutorial</h4>
+                    <p>3 min</p>
+                </div>
+            </div>
+
+            <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/9U3IhLAnSxM', 'Arrays and Strings')">
+                <img src="download (2).jfif" alt="Arrays">
+                <div class="video-info">
+                    <h4>Arrays and Strings</h4>
+                    <p>2 min</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<script>
+    function changeVideo(video, title) {
+        document.getElementById("mainVideo").src = video;
+        document.getElementById("videoTitle").innerText = title;
+    }
+</script>
+
+</body>
+</html>

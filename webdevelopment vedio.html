@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programming - Video Page</title>
+    <link rel="stylesheet" href="style-Video-page.css">
+</head>
+<body>
+
+    <div class="header">web development- Video Learning Page</div>
+
+    <v class="container">
+        <div class="main-video">
+    <iframe id="mainVideo" src="https://www.youtube.com/embed/UB1O30fR-EE" frameborder="0" allowfullscreen></iframe>
+    <h2 id="videoTitle">Introduction to HTML</h2>
+</div>
+
+        <div class="video-list">
+            <h3>Web development Playlist</h3>
+            <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/UB1O30fR-EE', 'Introduction to HTML')">
+    <img src="download (5).jfif">
+    <div class="video-info">
+        <h4>Introduction to HTML</h4>
+        <p>60 min</p>
+    </div>
+</div>
+
+<div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/yfoY53QXEnI', 'Styling with CSS')">
+    <img src="images (1).jfif">
+    <div class="video-info">
+        <h4>Styling with CSS</h4>
+        <p>85 min</p>
+    </div>
+</div>
+
+<div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/PkZNo7MFNFg', 'JavaScript Basics')">
+    <img src="download (7).jfif">
+    <div class="video-info">
+        <h4>JavaScript Basics</h4>
+        <p>206 min</p>
+    </div>
+</div>
+
+<div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/0ik6X4DJKCc', 'DOM Manipulation')">
+    <img src="download (3).jfif">
+    <div class="video-info">
+        <h4>DOM Manipulation</h4>
+        <p>39 min</p>
+    </div>
+</div>
+
+<div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/itrkdEJaD-U', 'Form Validation')
+">
+    <img src="download (1).jfif">
+    <div class="video-info">
+        <h4>Form Validation</h4>
+        <p>40 min</p>
+    </div>
+</div>
+<script>function changeVideo(video, title) {
+    document.getElementById("mainVideo").src = video;
+    document.getElementById("videoTitle").innerText = title;
+}
+</script>
+
+</body>
+</html>

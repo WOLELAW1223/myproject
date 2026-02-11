@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="styleregister.css">
+</head>
+<body>
+  <div class="container">
+    <form id="registerForm"
+    action="Register.php" method="post">
+      <h1>Registration Form</h1>
+      
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="phone">Phone No:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" 
+       pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" 
+       required>
+
+      </div>
+      
+      <div class="form-group password-group">
+        <label for="password">Password:</label>
+       <input type="password" id="password" name="password"
+       pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).{8,}$"
+       required>
+<span id="passwordError" style="color:blue; font-size:14px;"></span>
+
+        <span id="togglePassword" class="toggle">👁</span>
+      </div>
+      
+      <div class="form-group">
+        <label for="birth">Birth Date:</label>
+        <input type="date" id="birth" name="birth" required>
+      </div>
+      
+      <div class="form-group">
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female" required> Female
+      </div>
+      
+      <div class="form-group">
+        <label for="course">Course:</label>
+        <select name="course" id="course" required>
+          <option value="">Select Course</option>
+          <option>Web Development</option>
+          <option>Computer Network and Security</option>
+          <option>Database Management Systems</option>
+          <option>Artificial Intelligence Basics</option>
+          <option>Data Structures and Algorithms</option>
+        </select>
+      </div>
+      
+      <div class="form-actions">
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+      </div>
+      
+      <p id="error" class="error"></p>
+    </form>
+  </div>
+
+  <script src="scriptregistration.js"></script>
+</body>
+</html>

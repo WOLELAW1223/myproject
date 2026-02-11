@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>login</title>
+    <link rel="stylesheet" href="stylelogin.css">
+  </head>
+    <body>
+ <div class="container">
+    <h1>Login</h1>
+    <p>Login to your smart learn account</p>
+      <form id="loginForm" action="Login.php" method="POST">
+<table>
+  <tr>
+  <td>Username:</td>
+  <td><input type="text" name="username" required></td>
+</tr>
+<tr>
+  <td>Password:</td>
+  <td style="position: relative;">
+    <input type="password" id="password" name="password" required>
+    <span id="togglePassword" style="cursor:pointer; position:absolute; right:5px; top:5px; font-size:14px;">👁</span>
+  </td>
+</tr>
+<tr>
+<td> </td>
+<td><a href="forgot password.html">Forgot password</a>
+</td></tr>
+      </table>
+    <p id="error" style="color:red; display:none;"></p>
+     
+        <input type="submit" name="Login" value="Login">
+        <p>Don't have an account?</p>
+        <a href="Register.html">Register Here</a>
+
+    </form>
+</div>
+
+<script>
+ const password = document.getElementById("password");
+const toggle = document.getElementById("togglePassword");
+
+toggle.addEventListener("click", function () {
+    if(password.type === "password"){
+        password.type = "text";
+        toggle.textContent = "🙈";
+    } else {
+        password.type = "password";
+        toggle.textContent = "👁";
+    }
+});
+
+document.getElementById("loginForm").addEventListener("submit", function(e){
+    let username = document.querySelector('input[name="username"]').value;
+    let pass = password.value;
+
+    let error = document.getElementById("error");
+
+    if(username.length < 3){
+        e.preventDefault();
+        error.style.display = "block";
+        error.textContent = "Username must be at least 3 characters.";
+    }
+    else if(pass.length < 8){
+        e.preventDefault();
+        error.style.display = "block";
+        error.textContent = "Password must be at least 8 characters.";
+    }
+    else{
+        error.style.display = "none";
+    }
+});
+</script>
+
+    </body>
+    </html>
+    

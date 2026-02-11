@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Networking - Video Page</title>
+    <link rel="stylesheet" href="style-Video-page.css">
+</head>
+<body>
+
+    <div class="header">Networking- Video Learning Page</div>
+
+    <div class="container">
+        <div class="main-video">
+            <iframe id="mainVideo" 
+                    src="https://www.youtube.com/embed/nk3HbwHsPfQ" 
+                    frameborder="0" allowfullscreen></iframe>
+            <h2 id="videoTitle">Introduction to Networking</h2>
+        </div>
+        <div class="video-list">
+     <h3>Networking Playlist</h3>
+<div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/nk3HbwHsPfQ', 'Introduction to Networking')">
+     <img src="download (1).jfif" alt="Intro">
+    <div class="video-info">
+        <h4>Introduction to Networking</h4>
+         <p>8 min</p>
+         </div>
+            </div>
+            <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/XMGzP4nEtsA', 'Network Topologies')">
+                <img src="download (2).jfif" alt="Topologies">
+                <div class="video-info">
+                    <h4>Network Topologies</h4>
+                    <p>7 min</p>
+                </div>
+            </div>
+            <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/1msEo8PIcbw', 'Network Models')">
+                <img src="download (4).jfif" alt="Models">
+                <div class="video-info">
+                    <h4>Network Models</h4>
+                    <p>11 min</p>
+                </div>
+            </div>
+            <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/jLW_P12fZvQ', 'Wireless Networking')">
+                <img src="download (2).jfif" alt="Wireless">
+                <div class="video-info">
+                    <h4>Wireless Networking</h4>
+                    <p>5 min</p>
+                </div>
+            </div>
+            <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/VwN91x5i25g', 'Network Security')">
+                <img src="../Image/download (2).jfif" alt="Security">
+                <div class="video-info">
+                    <h4>Network Security</h4>
+                    <p>9 min</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<script>
+    function changeVideo(video, title) {
+        document.getElementById("mainVideo").src = video;
+        document.getElementById("videoTitle").innerText = title;
+    }
+</script>
+
+</body>
+</html>

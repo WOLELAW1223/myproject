@@ -1,0 +1,249 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for header */
+.container {
+    background-color: #1e3a8a; /* deep blue */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+/* Logo inside circle */
+.logo-circle {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%; /* makes it a perfect circle */
+    background-color: #2563eb; /* circle background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.logo-circle img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; /* ensures image is also circular */
+}
+
+/* Header Title */
+.container h1 {
+    font-size: 20px;
+    margin-left: 15px;
+    flex-grow: 1;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* space between buttons */
+}
+
+/* Standard links */
+nav a, .dropbtn {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+nav a:hover, .dropbtn:hover {
+    background-color: #3b82f6; /* lighter blue on hover */
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3b82f6;
+    min-width: 150px;
+    border-radius: 5px;
+    z-index: 1;
+    top: 100%; /* position below the button */
+}
+
+/* Individual dropdown items */
+.dropdown-content .item {
+    color: white;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dropdown-content .item:hover {
+    background-color: #1e40af;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Iframe styling */
+iframe[name="content"] {
+    width: 100%;
+    height: calc(100vh - 80px); /* full page minus header */
+    border: none;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* --- General Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Body Styling --- */
+body {
+    background-color: #f4f4f9;
+    color: #1e1e1e;
+    line-height: 1.6;
+}
+
+/* --- Header Scrolling Container --- */
+.header-scroll {
+    width: 100%;
+    background-color: #1e3a8a;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* --- Scrolling Content --- */
+.header-scroll-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 20s linear infinite;
+}
+
+/* --- Header Text Styling --- */
+.header-scroll h1, .header-scroll p {
+    display: inline-block;
+    margin-right: 50px; /* space between repeats */
+    font-weight: bold;
+}
+
+.header-scroll p {
+    font-size: 16px;
+}
+
+/* --- Scroll Animation --- */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* --- Table Styling --- */
+table {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px;
+    font-size: 22px;
+}
+
+td {
+    padding: 10px;
+}
+
+td img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+td img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+footer h1 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* --- Responsive Styling --- */
+@media screen and (max-width: 1024px) {
+    .header-scroll h1 {
+        font-size: 22px;
+    }
+    .header-scroll p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-scroll-content {
+        animation: scroll-left 30s linear infinite; /* slower on small screens */
+    }
+
+    table {
+        width: 100%;
+    }
+
+    td img {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-scroll h1 {
+        font-size: 18px;
+    }
+    .header-scroll p {
+        font-size: 12px;
+    }
+
+    td img {
+        max-width: 100%;
+    }
+}
+
